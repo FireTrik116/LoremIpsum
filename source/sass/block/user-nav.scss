@@ -1,0 +1,196 @@
+.user-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-header;
+  padding: 32px 0 32px 0;
+  z-index: 1;
+  animation-name: user;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+
+  &__container {
+    position: relative;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    width: 247px;
+    height: 35px;
+
+    &:hover {
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+
+    }
+  }
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+    &__burger{
+      display: flex;
+      border: none;
+      flex-direction: column;
+      height: 25px;
+      justify-content: space-between;
+      background: transparent;
+      margin-left: 10px;
+
+      @media (min-width: 768px) {
+        display: block;
+        margin: 0;
+      }
+  }
+
+  &__line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: $color-blue;
+    border: none;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__line--center {
+   background-color: $color-white;
+
+  }
+
+  &__list {
+    display: none;
+    text-align: center;
+
+    &--active {
+      display: block;
+      animation-name: blockactive;
+      animation-duration: 0.5s;
+      margin-top: 10px;
+      
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
+      flex: auto;
+      padding-right: -10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 9px;
+
+    &:not(:last-child) {
+      @media (min-width: 768px) {
+        margin-right: 6%;
+        margin: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: $basic-font;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 16px;
+    color: $color-white;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      width: 100%;
+      font-size: 13px;
+    }
+
+    &--active {
+      color: $color-blue;
+    }
+
+    &:hover {
+      color: $color-blue;
+      transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
+
+     
+    }
+    &::after {
+      content: "";
+      bottom: 0;
+      left: 50%;
+      display: block;
+      background: none repeat scroll 0 0 transparent;
+      height: 3px;
+      width: 0;
+      background: $color-blue;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+
+      @media (min-width: 768px) {
+        position: absolute;
+      }
+    }
+
+    &:active {
+      color: $color-blue;
+      opacity: 0.6;
+    }
+  }
+}
+
+.active--center{
+  transform: rotate(-45deg);
+  transition: transform 0.3s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.active--wire{
+  background-color: $color-white;
+  width: 15px;
+  transform: rotate(225deg) translateX(-5px) translateY(-3px);
+  transition: transform 0.3s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.active--down{
+  background-color: $color-white;
+  width: 15px;
+  transform: rotate(45deg) translateX(5px) translateY(-13px);
+  transition: transform 0.3s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+@keyframes user {
+  from {opacity: 0;
+    transform: translateX(-2000px);
+    transition: all;
+ }
+  to { opacity: 1;
+    transition: all;
+  transform: none; }
+ }
+
+ @keyframes blockactive {
+  from {opacity: 0;}
+  to { opacity: 1; }
+ }

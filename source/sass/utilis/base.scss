@@ -1,0 +1,35 @@
+.container {
+  max-width: 1206px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.user-nav__list, .header-intro__list{
+list-style-type: none;
+}
+
+.field__input{
+  outline: none;
+}

@@ -1,0 +1,32 @@
+.header {
+  background-image: url(../images/background-img.jpg);
+  background-position: 33%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    background-image: url(../images/background-img.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/background-img@2.jpg);
+      background-position: 50%;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 100%;
+    background-image: url(../images/background-img.jpg);
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/background-img@2.jpg);
+    }
+  }
+}
+
+
+

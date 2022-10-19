@@ -76,6 +76,156 @@
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="order container">
+        <h2 class="order__title">
+          Оформление
+          <span>заказа</span>
+        </h2>
+        <p class="order__subtitle">
+          Перед заполнением формы ознакомьтесь с нашей схемой работы!
+        </p>
+
+        <ul class="order__list">
+          <li class="order__item order__item--search">
+            <i class="order__icon"></i>
+            <span class="order__desc">Lorem ipsum dolor sit <br> amet</span>
+          </li>
+          <li class="order__item order__item--precent">
+            <i class="order__icon"></i>
+            <span class="order__desc">Сonsecteturadipiscing elit</span>
+          </li>
+          <li class="order__item order__item--document">
+            <i class="order__icon"></i>
+            <span class="order__desc">Sed do eiusmod tempor</span>
+          </li>
+          <li class="order__item order__item--mail">
+            <i class="order__icon"></i>
+            <span class="order__desc">Esse cillum dolore eu fugiat</span>
+          </li>
+          <li class="order__item order__item--money">
+            <i class="order__icon"></i>
+            <span class="order__desc"
+              >Excepteur sint occaecat<br />
+              cupidatat non proident</span
+            >
+          </li>
+        </ul>
+
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <div class="select-menu">
+              <div class="select-menu__input">
+                <span class="select-menu__text">Выберите тип системы</span>
+              </div>
+              <div class="select-menu__dropdown">
+                <ul class="select-menu__list">
+                  <li class="select-menu__item">Sed ut perspiciatis</li>
+                  <li class="select-menu__item">Nemo enim ipsam</li>
+                  <li class="select-menu__item">Et harum quidem</li>
+                  <li class="select-menu__item">Temporibus autem</li>
+                  <li class="select-menu__item">Itaque earum rerum</li>
+                  <li class="select-menu__item">Выбирете тип системы</li>
+                </ul>
+              </div>
+            </div>
+            <input
+              class="form__input"
+              type="text"
+              id="mail"
+              name="user_email"
+              placeholder="Ваш e-mail"
+            />
+            <input
+              class="form__input"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Ваше имя"
+            />
+          </div>
+          <div class="form__row form__row--bottom">
+            <div class="range">
+              <div class="range__inner">
+                <span class="range__desc"
+                  >Sed ut perspiciatis, unde omnis iste natus</span
+                >
+                <p class="range__result">
+                  <span class="range__number" id="demo"></span>%
+                </p>
+              </div>
+
+              <input
+                class="range__input"
+                type="range"
+                min="0"
+                max="100"
+                value="75"
+                id="sliderRange"
+              />
+            </div>
+
+            <label class="form__button" for="file__user">
+              <input
+                class="order__input"
+                type="file"
+                name="user_file"
+                id="file__user"
+                accept="image/*,.pdf."
+              />
+
+              <span class="form__text">Прикрепить файл</span>
+            </label>
+          </div>
+
+          <button class="form__submit" type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <span class="footer__text"
+          >© 2018 <span class="footer__desc">«LoremIpsum.net»</span> Все права
+          защищены.</span
+        >
+      
+       <div class="payment">
+          <ul class="payment__list">
+            <li class="payment__item">
+              <span class="payment__link payment__link--qiwi"
+                ><span class="payment__text">Qiwi</span> wallet</span
+              >
+            </li>
+            <li class="payment__item">
+              <span class="payment__link payment__link--yandex"
+                >Yandex Money</span
+              >
+            </li>
+            <li class="payment__item">
+              <span class="payment__link payment__link--webmoney"
+                >Web Money</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a
+                class="contacts__link contacts__link--email"
+                href="https://info@ipsum228.com"
+                >info@ipsum228.com</a
+              >
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--vk" href="https://vk.com"
+                >Мы вконтакте</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ const down = document.querySelector(".user-nav__line--down");
 
 
 
+
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
     modal.classList.toggle("user-nav__list--active");
@@ -26,4 +27,9 @@ const down = document.querySelector(".user-nav__line--down");
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
     down.classList.toggle("active--down");
+  });
+
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    link.classList.toggle("user-nav__burger--active");
   });

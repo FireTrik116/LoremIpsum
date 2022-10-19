@@ -1,51 +1,57 @@
 .header-intro {
     text-align: left;
-    padding: 103px 20px 201px 20px;
+    padding: 140px 15px 140px;
     animation-name: box;
     animation-delay: 0.5s;
-    animation-duration: 2s;
+    animation-duration: 3s;
   
   
     @media (min-width: 768px) {
       text-align: start;
+      padding: 201px 20px 201px;
     }
   
     &__title {
       font-family: $second-font;
       font-weight: 800;
-      font-style: normal;
       font-size: 18px;
       text-transform: uppercase;
       line-height: 30px;
       color: $color-black;
       margin-bottom: 30px;
-      padding-top: 45px;
+      animation-name: introTitle;
+      animation-delay: 0.5s;
+      animation-duration: 3s;
+      transition: all ease;
+     
       
   
       @media (min-width: 768px) {
         font-size: 45px;
         line-height: 58.6px;
-        padding-top: 100px;
         margin-bottom: 89px;
       }
     }
   
     &__desc {
       color: $color-blue;
-      margin-right: 18px;
+      margin-right: 8px;
+
+      @media (min-width: 768px){
+        margin-right: 18px;
+      }
     }
   
     &__text {
       display: inline-block;
       font-family: $basic-font;
-      font-style: normal;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
       color: $color-black;
       margin-bottom: 9px;
       animation-name: intro;
-      animation-delay: 1s;
+      animation-delay: 0.5s;
       animation-duration: 3s;
       transition: all ease;
       
@@ -62,7 +68,7 @@
       flex-direction: column;
       text-align: left;
       animation-name: headerText;
-      animation-delay: 1s;
+      animation-delay: 0.5s;
       animation-duration: 3s;
       transition: all ease;
   
@@ -74,7 +80,6 @@
     &__item {
       position: relative;
       font-family: $basic-font;
-      font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 24px;
@@ -113,7 +118,7 @@
       border-radius: 4px;
       cursor: pointer;
       animation-name: intro;
-      animation-delay: 1s;
+      animation-delay: 0.5s;
       animation-duration: 3s;
       transition: all ease;
   
@@ -160,7 +165,7 @@
 
   @keyframes box {
     from {opacity: 0;
-      transform: translateY(-2000px);
+      transform: translateX(-2000px);
       transition: all;
    }
     to { opacity: 1;
@@ -168,6 +173,16 @@
     transform: none; }
    }
 
+   @keyframes introTitle {
+    from {opacity: 0;}
+    to { opacity: 1;}
+   }
+   
+
+   @keyframes headerText {
+    from {opacity: 0;}
+    to { opacity: 1;}
+   }
 
 @keyframes intro {
   from {opacity: 0;}

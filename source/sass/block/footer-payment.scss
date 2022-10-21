@@ -1,17 +1,15 @@
-.contacts {
+.footer-payment {
     position: relative;
-    margin-left: 0;
-    
+    margin-bottom: 15px;
   
     @media (min-width: 1100px) {
-      margin-left: 81px;
-      
+      margin-bottom: 0;
     }
   
     &::before {
       position: absolute;
       content: "";
-      left: -37px;
+      left: -43px;
       border-left: 1px $color-payment-link solid;
       width: 1px;
       height: 18px;
@@ -33,7 +31,7 @@
       }
     }
   
-    &__item:not(:last-child) {
+    &__item {
       padding-left: 0;
       margin-bottom: 15px;
   
@@ -49,38 +47,32 @@
       font-weight: 400;
       font-size: 13px;
       line-height: 16px;
-      color: $color-white;
-  
-      &--email::before {
+      color: $color-payment-link;
+
+      &::before{
         position: absolute;
         content: "";
-        background-image: url(../images/e-mail.svg);
         background-repeat: no-repeat;
         top: -2px;
-        left: -32px;
+        left: -33px;
         width: 20px;
         height: 20px;
       }
   
-      &--vk::before {
-        position: absolute;
-        content: "";
-        background-image: url(../images/vk.svg);
-        background-repeat: no-repeat;
-        top: -2px;
-        left: -32px;
-        width: 20px;
-        height: 20px;
+      &--qiwi::before {
+        background-image: url(../images/qiwi.svg);
       }
   
-      &:hover {
-        opacity: 0.5;
-        transition: all 0.5s ease;
+      &--yandex::before {
+        background-image: url(../images/yandex.svg);
       }
   
-      &:active {
-        opacity: 0.3;
-        transition: all 0.5s ease;
+      &--webmoney::before {
+        background-image: url(../images/webmoney.svg);
       }
+    }
+  
+    &__text {
+      text-transform: uppercase;
     }
   }

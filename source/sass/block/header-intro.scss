@@ -1,194 +1,172 @@
 .header-intro {
-    text-align: left;
-    padding: 140px 15px 140px;
-    animation-name: box;
-    animation-duration: 2s;
-  
-  
-    @media (min-width: 768px) {
-      text-align: start;
-      padding: 201px 20px 201px;
-    }
-  
-    &__title {
-      font-family: $second-font;
-      font-weight: 800;
-      font-size: 18px;
-      text-transform: uppercase;
-      line-height: 30px;
-      color: $color-black;
-      margin-bottom: 30px;
-      animation-name: introTitle;
-      
-      animation-duration: 2s;
-      transition: all ease;
-     
-      
-  
-      @media (min-width: 768px) {
-        font-size: 45px;
-        line-height: 58.6px;
-        margin-bottom: 89px;
-      }
-    }
-  
-    &__desc {
-      color: $color-blue;
-      margin-right: 8px;
+  text-align: left;
+  padding: 140px 15px 140px;
+  animation-name: box;
+  animation-duration: 2s;
 
-      @media (min-width: 768px){
-        margin-right: 18px;
-      }
-    }
-  
-    &__text {
-      display: inline-block;
-      font-family: $basic-font;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      color: $color-black;
-      margin-bottom: 9px;
-      animation-name: intro;
-      
-      animation-duration: 2s;
-      transition: all ease;
-      
-
-      @media (min-width: 768px) {
-        font-size: 18px;
-      }
-    }
-  
-    &__list {
-      
-      display: flex;
-      margin-bottom: 70px;
-      flex-direction: column;
-      text-align: left;
-      animation-name: headerText;
-      
-      animation-duration: 2s;
-      transition: all ease;
-  
-      @media (min-width: 768px) {
-        align-items: flex-start;
-      }
-    }
-  
-    &__item {
-      position: relative;
-      font-family: $basic-font;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
-      color: $color-black;
-      padding-left: 32px;
-      margin-bottom: 6px;
-     
-  
-      &::before {
-        position: absolute;
-        content: "";
-        width: 4.94px;
-        height: 1.51px;
-        border: 0.75px  $color-black solid;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 16px;
-      }
-  
-      @media (min-width: 768px) {
-        font-size: 20px;
-      }
-    }
-  
-    &__link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: $basic-font;
-      font-size: 13px;
-      line-height: 16px;
-      text-transform: uppercase;
-      min-width: 280px;
-  
-      padding: 14px 14px;
-      border-radius: 4px;
-      cursor: pointer;
-      animation-name: intro;
-      
-      animation-duration: 2s;
-      transition: all ease;
-  
-      @media (min-width: 768px) {
-        min-width: 183px;
-      }
-  
-      &--blue {
-        background-color: $color-blue;
-        color: $color-white;
-        border: 1px  $color-white solid;
-        margin-bottom: 20px;
-  
-        @media (min-width: 768px) {
-          margin-bottom: 0;
-          margin-left: 8px;
-        }
-      }
-  
-      &--white {
-        background-color: $color-white;
-        color: $color-grey;
-        border: 1px solid $color-grey;
-  
-        @media (min-width: 768px) {
-          margin-left: 30px;
-        }
-      }
-    }
-  
-    &__controls {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      @media (min-width: 768px) {
-        flex-direction: row;
-      }
-    }
-
-   
+  @media (min-width: 768px) {
+    text-align: start;
+    padding: 201px 20px 201px;
   }
 
+  &__title {
+    font-family: $second-font;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 30px;
+    color: $color-black;
+    margin-bottom: 30px;
+    animation-name: fade;
 
-  @keyframes box {
-    from {opacity: 0;
-      transform: translateX(-2000px);
-      transition: all;
-   }
-    to { opacity: 1;
-      transition: all;
-    transform: none; }
-   }
+    animation-duration: 2s;
+    transition: opacity ease;
 
-   @keyframes introTitle {
-    from {opacity: 0;}
-    to { opacity: 1;}
-   }
-   
+    @media (min-width: 768px) {
+      font-size: 45px;
+      line-height: 58.6px;
+      margin-bottom: 89px;
+    }
+  }
 
-   @keyframes headerText {
-    from {opacity: 0;}
-    to { opacity: 1;}
-   }
+  &__description {
+    color: $color-blue;
+    margin-right: 8px;
 
-@keyframes intro {
-  from {opacity: 0;}
-  to { opacity: 1;}
- }
- 
+    @media (min-width: 768px) {
+      margin-right: 18px;
+    }
+  }
 
-  
+  &__text {
+    display: inline-block;
+    font-family: $basic-font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
+    margin-bottom: 9px;
+    animation-name: fade;
 
-  
+    animation-duration: 2s;
+    transition: opacity ease;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 70px;
+    flex-direction: column;
+    text-align: left;
+    animation-name: fade;
+
+    animation-duration: 2s;
+    transition: opacity ease;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-family: $basic-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-black;
+    padding-left: 32px;
+    margin-bottom: 6px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 4.94px;
+      height: 1.51px;
+      border: 0.75px $color-black solid;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 16px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $basic-font;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    min-width: 280px;
+
+    padding: 14px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    animation-name: fade;
+
+    animation-duration: 2s;
+    transition: opacity ease;
+
+    @media (min-width: 768px) {
+      min-width: 183px;
+    }
+
+    &--blue {
+      background-color: $color-blue;
+      color: $color-white;
+      border: 1px $color-white solid;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: rgba(0, 0, 0, 1);
+        background-color: rgba(62, 156, 220, 0.6);
+      }
+
+      &:active {
+        background-color: rgba(62, 156, 220, 0.3);
+      }
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &--white {
+      background-color: $color-white;
+      color: $color-black;
+      border: 1px solid $color-grey;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      width: 396px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

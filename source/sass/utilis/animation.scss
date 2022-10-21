@@ -1,0 +1,20 @@
+@keyframes box {
+  from {
+    opacity: 0;
+    transform: translateX(-2000px);
+    transition: all;
+  }
+  to {
+    opacity: 1;
+    transition: all;
+    transform: none;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

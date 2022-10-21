@@ -20,7 +20,7 @@
       }
     
 
-    span {
+    &--color {
       color: $color-blue;
     }
   }
@@ -55,6 +55,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    max-width: 205px;
 
     @media (min-width: 768px) {
       margin-bottom: 0;
@@ -128,7 +129,7 @@
     }
   }
 
-  &__desc {
+  &__description {
     font-family: $basic-font;
     font-style: normal;
     font-weight: 400;

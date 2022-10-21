@@ -6,10 +6,9 @@
   padding: 15px 0;
   z-index: 1;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     padding: 32px 0;
   }
- 
 
   &__container {
     position: relative;
@@ -27,7 +26,7 @@
 
     &:hover {
       opacity: 0.6;
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     &:active {
@@ -36,32 +35,45 @@
 
     @media (min-width: 768px) {
       margin-left: 0;
-
     }
   }
 
-  &__inner{
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-    &__burger{
-      display: flex;
-      border: none;
-      flex-direction: column;
-      height: 25px;
-      justify-content: space-between;
-      background: transparent;
-      margin-left: 10px;
+  &__burger {
+    display: flex;
+    border: none;
+    flex-direction: column;
+    height: 25px;
+    justify-content: space-between;
+    background: transparent;
+    margin-left: 10px;
 
-     
-      
-
-      @media (min-width: 768px) {
-        display: block;
-        margin: 0;
+    &--active {
+      .user-nav__line--top {
+        background-color: $color-white;
+        transform: rotate(135deg) translateX(8px) translateY(-7.5px);
       }
+
+      .user-nav__line--center {
+        background-color: $color-white;
+        transform: rotate(45deg);
+      }
+
+      .user-nav__line--down {
+        background-color: $color-white;
+        transform: rotate(135deg) translateX(-8px) translateY(8px);
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+      margin: 0;
+    }
   }
 
   &__line {
@@ -70,7 +82,7 @@
     height: 3px;
     background-color: $color-blue;
     border: none;
-    transition:  transform .3s cubic-bezier(0.49, 0.49, 0.49, 0.49);
+    transition: transform 0.3s cubic-bezier(0.49, 0.49, 0.49, 0.49);
 
     @media (min-width: 768px) {
       display: none;
@@ -78,10 +90,8 @@
   }
 
   &__line--center {
-   background-color: $color-white;
+    background-color: $color-white;
   }
-
-  
 
   &__list {
     display: none;
@@ -89,14 +99,10 @@
 
     &--active {
       display: block;
-      animation-name: blockactive;
+      animation-name: fade;
       animation-duration: 0.5s;
       margin-top: 10px;
-      
     }
-      
-  
-
     @media (min-width: 768px) {
       display: flex;
       justify-content: flex-end;
@@ -108,7 +114,6 @@
   &__item {
     position: relative;
     padding: 9px;
-    
 
     &:not(:last-child) {
       @media (min-width: 768px) {
@@ -134,18 +139,17 @@
 
     &--active {
       color: $color-blue;
+      opacity: 0.6;
     }
 
     &:hover {
       color: $color-blue;
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     &:hover::after {
       width: 100%;
       left: 0;
-
-     
     }
     &::after {
       content: "";
@@ -162,36 +166,5 @@
         position: absolute;
       }
     }
-
-    &:active {
-      color: $color-blue;
-      opacity: 0.6;
-    }
   }
 }
-
-.active--center{
-  background-color: $color-white;
-  transform: rotate(45deg);
-  
- 
-}
-
-.active--wire{
-  background-color: $color-white;
-  transform: rotate(135deg) translateX(8px) translateY(-7.5px);
-  
- 
-
-}
-
-.active--down{
-  background-color: $color-white;
-  transform: rotate(135deg) translateX(-8px) translateY(8px);
-
-}
-
- @keyframes blockactive {
-  from {opacity: 0;}
-  to { opacity: 1; }
- }
